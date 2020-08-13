@@ -1,0 +1,43 @@
+<app-users-layout-header></app-users-layout-header>
+
+<section class="section users">
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-body">
+
+            <div class="table-responsive">
+              <table class="table table-sm table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col" style="width:35%">Empresa</th>
+                    <th scope="col" style="width:35%">Nome</th>
+                    <th scope="col" style="width:30%">E-mail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let card of myData" (click)="viewCardDetail(card)">
+                    <app-card [card]="card" style="display: contents;width: 100%;"></app-card>
+                  </tr>
+                </tbody>
+              </table>
+
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<app-users-layout-footer></app-users-layout-footer>

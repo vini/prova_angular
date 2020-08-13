@@ -1,0 +1,17 @@
+<div class="card-body">
+  <h4 class="card-title">{{ cardDetail.company.name }}</h4>
+  <p class="card-text">
+    <b>Nome: </b>{{ cardDetail.name }}<br>
+    <b>Apelido: </b>{{ cardDetail.username }}<br>
+    <b>E-mail: </b>{{ cardDetail.email }}<br>
+    <b>Telefone: </b>{{ cardDetail.phone }}
+  </p>
+  <p class="card-text">
+    <b>Endereco: </b>{{ cardDetail.address.street }}, {{ cardDetail.address.suite }}<br>
+    {{ cardDetail.address.city }} - {{ cardDetail.address.zipcode }}
+  </p>
+  <iframe width="100%" height="220" frameborder="0" style="border:0"
+  [src]="sanitizeUrl(cardDetail.address.geo.lat, cardDetail.address.geo.lon)" allowfullscreen></iframe>
+  <br />
+  <a href="http://{{ cardDetail.website }}" target="_blank" class="btn btn-primary">Acessar Website</a>
+</div>

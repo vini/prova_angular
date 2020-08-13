@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background:#f7f7f7;
+}
+
+.section.users {
+    min-height:420px;
+}
+
+.header {
+    margin-bottom:30px;
+}
+
+.footer {
+    margin-top:60px;
+}
+
+.table tbody tr {
+    cursor:pointer;
+}

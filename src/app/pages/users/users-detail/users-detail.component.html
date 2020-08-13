@@ -1,0 +1,25 @@
+<app-users-layout-header></app-users-layout-header>
+
+<section class="section users">
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="card col-md-12 text-center" *ngIf="myData.length == 0">
+        <div class="card-body">
+          <h5 class="card-title">Nenhum registro encontrado.</h5>
+        </div>
+      </div>
+
+      <div class="card col-12 col-md-6" *ngFor="let cardDetail of myData">
+        <app-card-detail [cardDetail]="cardDetail"></app-card-detail>
+      </div>
+      
+    </div>
+
+  </div>
+
+</section>
+
+<app-users-layout-footer></app-users-layout-footer>
